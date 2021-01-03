@@ -1,10 +1,10 @@
 drop database expensetrackerdb;
 drop user postgres;
-create user expensetracker with password 'skittylove33';
+create user postgres with password 'skittylove33';
 create database expensetrackerdb with template=template0 owner=postgres;
 \connect expensetrackerdb;
-alter default privileges grant all on tables to expensetracker;
-alter default privileges grant all on sequences to expensetracker;
+alter default privileges grant all on tables to postgres;
+alter default privileges grant all on sequences to postgres;
 
 create table et_users(
 user_id integer primary key not null,
