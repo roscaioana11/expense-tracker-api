@@ -15,7 +15,8 @@ public interface CategoryService {
 
     void updateCategory(Integer userId, Integer categoryId, Category category) throws EtResourcesNotFoundException;
 
-    void removeCategoryWithAllTransactions(Integer userId, Integer categoryId, Category category) throws EtResourcesNotFoundException; //note that simply removing a category won't work,
+    void removeCategoryWithAllTransactions(Integer userId, Integer categoryId) throws EtResourcesNotFoundException; //note that simply removing a category won't work,
+
     // each category can have multiple transactions,
     // so before deleting a category, first of all we have to remove all of the transactions and then to remove the category this is known as Cascade glade
 
